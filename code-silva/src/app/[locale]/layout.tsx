@@ -27,7 +27,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Remover o await
+
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
@@ -37,7 +37,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased custom-bg`}
       >
         <NextIntlClientProvider locale={locale}>
           {children}
