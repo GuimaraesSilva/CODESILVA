@@ -16,7 +16,7 @@ export default function NavBar() {
     { name: "About", icon: User, href: "/about" },
     { name: "Work", icon: FolderOpen, href: "/work" },
     { name: "Contact", icon: Mail, href: "/contact" },
-    { name: "Hire Me", icon: UserPlus, href: "/hire" }
+    { name: "Hire Me", icon: UserPlus, href: "/hire" },
   ];
 
   return (
@@ -30,8 +30,11 @@ export default function NavBar() {
                 href={item.href}
                 className="flex items-center transition-all duration-300"
               >
-                <IconComponent className="w-8 h-8 text-white/80 group-hover:text-[#A57A0F] transition-colors duration-300 flex-shrink-0" />
-                <span className="absolute left-10 text-white/80 group-hover:text-white font-medium transition-all duration-300 opacity-0 group-hover:opacity-100 whitespace-nowrap">
+                <IconComponent 
+                  className="h-8 text-white/80 group-hover:text-[#B88900] transition-colors duration-300 flex-shrink-0" 
+                  strokeWidth={1.25}
+                />
+                <span className="absolute left-8 text-white/80 group-hover:text-white font-medium transition-all duration-300 opacity-0 group-hover:opacity-100 whitespace-nowrap">
                   {item.name}
                 </span>
               </Link>

@@ -11,7 +11,7 @@ export const routeKeys = {
 
 export const routing = defineRouting({
   locales: ["pt", "en"],
-  defaultLocale: "pt",
+  defaultLocale: "en",
   pathnames: {
     [routeKeys.home]: {
       pt: "/",
