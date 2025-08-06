@@ -3,16 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Facebook,
   Instagram,
-  Twitter,
   Linkedin,
-  Youtube,
   Github,
 } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
 
-// Social Media Links interface
 interface SocialLink {
   name: string;
   url: string;
@@ -39,29 +35,14 @@ export default function Header({
   logoHref = "/",
   socialLinks = [
     {
-      name: "Facebook",
-      url: "https://facebook.com",
-      icon: <Facebook className="h-5 w-5" />,
-    },
-    {
       name: "Instagram",
       url: "https://instagram.com",
       icon: <Instagram className="h-5 w-5" />,
     },
     {
-      name: "Twitter",
-      url: "https://twitter.com",
-      icon: <Twitter className="h-5 w-5" />,
-    },
-    {
       name: "LinkedIn",
       url: "https://linkedin.com",
       icon: <Linkedin className="h-5 w-5" />,
-    },
-    {
-      name: "YouTube",
-      url: "https://youtube.com",
-      icon: <Youtube className="h-5 w-5" />,
     },
     {
       name: "GitHub",
@@ -70,7 +51,7 @@ export default function Header({
     },
   ],
   onLanguageChange,
-  defaultLanguage = "pt",
+  defaultLanguage = "en",
   className = "",
 }: HeaderProps) {
   return (

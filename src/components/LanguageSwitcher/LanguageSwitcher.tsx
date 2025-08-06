@@ -15,12 +15,17 @@ import { Globe } from "lucide-react";
 interface Language {
   code: string;
   name: string;
-  flag: string; // Agora será o caminho para a imagem
+  flag: string;
 }
 
 const languages: Language[] = [
-  { code: "pt", name: "Português", flag: "/languages/pt.svg" },
+  { code: "de", name: "Deutsch", flag: "/languages/de.svg" },
   { code: "en", name: "English", flag: "/languages/en.svg" },
+  { code: "es", name: "Español", flag: "/languages/es.svg" },
+  { code: "fr", name: "Français", flag: "/languages/fr.svg" },
+  { code: "it", name: "Italiano", flag: "/languages/it.svg" },
+  { code: "pt", name: "Português", flag: "/languages/pt.svg" },
+  { code: "usa", name: "USA", flag: "/languages/usa.svg" },
 ];
 
 interface LanguageSwitcherProps {
@@ -80,8 +85,8 @@ export default function LanguageSwitcher({
               <Image
                 src={currentLanguage.flag}
                 alt={`${currentLanguage.name} flag`}
-                width={16}
-                height={12}
+                width={20}
+                height={15}
                 className="rounded-sm"
               />
               <span className="text-sm font-medium text-white/90">
@@ -98,7 +103,7 @@ export default function LanguageSwitcher({
                 height={15}
                 className="rounded-sm"
               />
-              <span className="text-sm font-medium text-white/90">
+              <span className="text-sm font-medium text-white/95">
                 {currentLanguage.name}
               </span>
             </>
@@ -121,7 +126,7 @@ export default function LanguageSwitcher({
                 className="rounded-sm"
               />
               <div className="flex flex-col items-start justify-center">
-                <span className="text-sm font-medium text-white/60">
+                <span className="text-sm font-medium text-white/80">
                   {language.name}
                 </span>
               </div>
