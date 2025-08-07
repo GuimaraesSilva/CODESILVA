@@ -26,7 +26,7 @@ export default function NavBar() {
 
   return (
     <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50">
-      <nav className="flex flex-col items-start space-y-8 p-4 bg-transparent backdrop-blur-xs rounded-4xl border border-white/10 hover:border-[#B88900]/30 group/nav transition-all duration-300 hover:pr-32">
+      <nav className="flex flex-col items-start space-y-8 p-4 bg-transparent backdrop-blur-xs rounded-4xl border border-white/10 hover:border-[#B88900]/30 group/nav transition-all duration-300 hover:pr-30">
         {menuItems.map((item, index) => {
           const IconComponent = item.icon;
           return (
