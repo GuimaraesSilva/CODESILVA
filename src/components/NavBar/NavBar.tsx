@@ -9,21 +9,24 @@ import {
   BookCheck
 } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function NavBar() {
+  const t = useTranslations("navbar");
+
   const menuItems = [
-    { name: "Home", icon: Home, href: "/" },
-    { name: "Services", icon: Briefcase, href: "/services" },
-    { name: "About", icon: User, href: "/about" },
-    { name: "Work", icon: FolderOpen, href: "/work" },
-    { name: "Education", icon: BookCheck, href: "/education" },
-    { name: "Contact", icon: Mail, href: "/contact" },
-    { name: "Hire Me", icon: UserPlus, href: "/hire" },
+    { name: t("home"), icon: Home, href: "/" },
+    { name: t("services"), icon: Briefcase, href: "/services" },
+    { name: t("about"), icon: User, href: "/about" },
+    { name: t("work"), icon: FolderOpen, href: "/work" },
+    { name: t("education"), icon: BookCheck, href: "/education" },
+    { name: t("contact"), icon: Mail, href: "/contact" },
+    { name: t("hireMe"), icon: UserPlus, href: "/hire" },
   ];
 
   return (
     <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50">
-      <nav className="flex flex-col items-start space-y-8 p-4 bg-transparent backdrop-blur-xs rounded-4xl border border-white/10 hover:border-[#B88900]/30 group/nav transition-all duration-300 hover:pr-26">
+      <nav className="flex flex-col items-start space-y-8 p-4 bg-transparent backdrop-blur-xs rounded-4xl border border-white/10 hover:border-[#B88900]/30 group/nav transition-all duration-300 hover:pr-32">
         {menuItems.map((item, index) => {
           const IconComponent = item.icon;
           return (

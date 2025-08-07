@@ -19,8 +19,8 @@ interface Language {
 }
 
 const languages: Language[] = [
-  { code: "en", name: "English", flag: "/languages/en.svg" },
-  { code: "pt", name: "Português", flag: "/languages/pt.svg" },
+  { code: "en", name: "EN", flag: "/languages/en.svg" },
+  { code: "pt", name: "PT", flag: "/languages/pt.svg" },
 ];
 
 interface LanguageSwitcherProps {

@@ -1,4 +1,11 @@
 {
-  "hello": "Olá",
-  "welcome": "Bem-vindo"
+  "navbar": {
+    "home": "Início",
+    "services": "Serviços",
+    "about": "Sobre",
+    "work": "Trabalhos",
+    "education": "Educação",
+    "contact": "Contato",
+    "hireMe": "Contrate-me"
+  }
 }

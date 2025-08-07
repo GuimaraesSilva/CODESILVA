@@ -1106,6 +1106,13 @@
       }
     }
   }
+  .hover\:pr-32 {
+    &:hover {
+      @media (hover: hover) {
+        padding-right: calc(var(--spacing) * 32);
+      }
+    }
+  }
   .hover\:text-\[\#B88900\] {
     &:hover {
       @media (hover: hover) {

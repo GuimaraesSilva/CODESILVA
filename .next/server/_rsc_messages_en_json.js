@@ -17,7 +17,7 @@ exports.modules = {
   \**************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"hello":"Hello","welcome":"Welcome"}');
+module.exports = /*#__PURE__*/JSON.parse('{"navbar":{"home":"Home","services":"Services","about":"About","work":"Work","education":"Education","contact":"Contact","hireMe":"Hire Me"}}');
 
 /***/ })
 
