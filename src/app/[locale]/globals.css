@@ -122,10 +122,32 @@
 }
 
 .custom-bg {
-  background-image: url('/site-bg.jpg'); /* Altere para o caminho da sua imagem */
+  background-image: url('/site-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Classe para o background circle-star */
+.circle-star {
+  background-image: url('/homepage/circle-star.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Animação spin lenta personalizada */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
 }
 
 
