@@ -26,7 +26,7 @@ export default function NavBarDesktop() {
 
   return (
     <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50">
-      <nav className="flex flex-col items-start space-y-8 p-4 bg-transparent backdrop-blur-xs rounded-4xl border border-white/10 hover:border-[#B88900]/30 group/nav transition-all duration-300 hover:pr-30">
+      <nav className="flex flex-col items-start space-y-8 p-4 bg-transparent backdrop-blur-xs rounded-4xl border border-white/10 hover:border-[#B88900]/30 group/nav transition-all duration-300 hover:pr-26">
         {menuItems.map((item, index) => {
           const IconComponent = item.icon;
           return (
@@ -39,7 +39,7 @@ export default function NavBarDesktop() {
                   className="h-8 text-white/80 group-hover:text-[#B88900] transition-colors duration-300 flex-shrink-0" 
                   strokeWidth={1.25}
                 />
-                <span className="absolute left-10 text-white/80 group-hover:text-[#B88900] font-medium transition-all duration-300 opacity-0 group-hover:opacity-100 whitespace-nowrap">
+                <span className="absolute left-10 text-black group-hover:text-[#B88900] font-medium transition-all duration-300 opacity-0 group-hover:opacity-100 whitespace-nowrap">
                   {item.name}
                 </span>
               </Link>

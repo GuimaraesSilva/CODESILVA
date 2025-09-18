@@ -52,11 +52,10 @@ export default function Header({
   ],
   onLanguageChange,
   defaultLanguage = "en",
-  className = "",
 }: HeaderProps) {
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 w-full ${className}`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full">
+      <div className="container mx-auto px-4 md:px-0">
         <div className="flex h-16 items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center">
