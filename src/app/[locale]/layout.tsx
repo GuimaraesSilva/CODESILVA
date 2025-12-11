@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";import "./globals.css";
+import { Jost } from "next/font/google";
+import "./globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import NavBar from "@/components/NavBar/NavBar";
-import Header from "@/components/Header/Header";
+// import NavBar from "@/components/NavBar/NavBar";
+// import Header from "@/components/Header/Header";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // escolhe os que vais usar
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -23,7 +24,7 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
 
   const { locale } = await params;
@@ -35,11 +36,11 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${poppins.variable} antialiased custom-bg min-h-screen font-sans text-white`}
+        className={`${jost.variable} antialiased custom-bg min-h-screen font-sans text-white`}
       >        
         <NextIntlClientProvider locale={locale}>
-          <Header />
-          <NavBar />
+          {/* <Header />
+          <NavBar /> */}
           {children}
         </NextIntlClientProvider>
       </body>

@@ -1,36 +1,75 @@
-import SpinnerWork from "@/components/SpinnerWork/SpinnerWork";
-import Image from "next/image";
+// import SpinnerWork from "@/components/SpinnerWork/SpinnerWork";
+// import Image from "next/image";
 
-export default function Home() {
+// export default function Home() {
+//   return (
+//     <div className="container mx-auto px-4 md:px-0">
+//       <div className="min-h-screen grid grid-cols-2 place-items-center">
+//         <div className="text-white text-left xl:px-26">
+//           <h1 className="text-white text-2xl font-extrabold leading-tight md:text-5xl mb-4">
+//             Transforming Ideas <br /> Into{" "}
+//             <span className="text-[#B88900]">Digital Reality </span>
+//           </h1>
+//           <div className="flex flex-col gap-2">
+//             <p className="text-white/80 text-sm md:text-lg font-light">
+//               Combining creativity with precision, I craft digital solutions that are not only functional but truly impactful.
+//             </p>
+//             <p className="text-white/80 text-sm md:text-lg font-light">
+//               If you’re looking for someone committed to quality, collaboration, and results, let’s work together.
+//             </p>
+//           </div>    
+//         </div>
+//         <div>
+//           <Image
+//             src="/logo.svg"
+//             alt="Developer Illustration"
+//             width={300}
+//             height={300}
+//             className="object-cover"
+//           />
+//         </div>
+//       </div>
+//       <div className="fixed inset-0 flex items-end justify-center md:justify-end pb-10 px-10">
+//         <SpinnerWork />
+//       </div>
+//     </div>
+//   );
+// }
+
+import Image from 'next/image';
+
+export default function ComingSoon() {
   return (
-    <div className="container mx-auto px-4 md:px-0">
-      <div className="min-h-screen grid grid-cols-2 place-items-center">
-        <div className="text-white text-left xl:px-26">
-          <h1 className="text-white text-2xl font-extrabold leading-tight md:text-5xl mb-4">
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-[#B88900]">Digital Reality </span>
-          </h1>
-          <div className="flex flex-col gap-2">
-            <p className="text-white/80 text-sm md:text-lg font-light">
-              Combining creativity with precision, I craft digital solutions that are not only functional but truly impactful.
-            </p>
-            <p className="text-white/80 text-sm md:text-lg font-light">
-              If you’re looking for someone committed to quality, collaboration, and results, let’s work together.
-            </p>
-          </div>    
-        </div>
-        <div>
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 relative" style={{ backgroundColor: '#F3F2EE' }}>
+      {/* Imagem de fundo */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-50 z-0">
+        <div className="relative w-full h-full">
           <Image
-            src="/logo.svg"
-            alt="Developer Illustration"
-            width={300}
-            height={300}
-            className="object-cover"
+            src="/avatar.png" 
+            alt="Logo"
+            fill
+            className="object-contain"
+            priority
           />
         </div>
       </div>
-      <div className="fixed inset-0 flex items-end justify-center md:justify-end pb-10 px-10">
-        <SpinnerWork />
+
+      {/* Conteúdo em primeiro plano */}
+      <div className="w-full text-center space-y-8 relative z-10">
+        {/* Main Content */}
+        <div className="space-y-4">
+          <h1 className="text-5xl md:text-9xl font-bold text-[#FF8C00]">
+            Coming Soon
+          </h1>
+          <p className="text-xl md:text-4xl text-[#1D1D1D] font-semibold">
+            We&apos;re working on something incredible.
+          </p>
+        </div>
+
+        {/* Description */}
+        <p className="text-base md:text-lg text-[#1D1D1D] font-semibold max-w-md mx-auto">
+          Our website is under development. We&apos;ll have exciting updates to share with you soon.
+        </p>
       </div>
     </div>
   );
